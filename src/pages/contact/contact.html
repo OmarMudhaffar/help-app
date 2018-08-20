@@ -1,17 +1,79 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      <p style="margin: 0;"> ساعد </p>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+
+    <ion-card style="margin: 10px 0px 10px 0px; width: 100%;" *ngFor="let item of list | async | reverse">
+
+        <div  [id]="item.payload.val().map2" #item.payload.val().map2 style="width: 100%; height: 250px;overflow: hidden;"></div>
+
+      
+        <ion-item>
+
+          <h2> {{item.payload.val().problem}} </h2>
+          <p>{{item.payload.val().des}}</p>
+        </ion-item>
+      
+
+      
+        <ion-item>
+          
+          <div class="sections">
+
+            <div class="delete">
+                <ion-icon (click)="delete(item.key)" name="ios-trash"></ion-icon>
+            </div>
+
+            <div class="edit">
+                <ion-icon (click)="edit(item.payload.val().problem,item.payload.val().des,item.payload.val().addr,item.key,item.payload.val().map,item.payload.val().phone,item.payload.val().lat,item.payload.val().lng)" name="create"></ion-icon>
+
+              </div>
+
+              
+            <div class="done">
+                <ion-icon (click)="aprove(item.key)" name="construct"></ion-icon>
+
+              </div>
+
+          </div>
+          
+        </ion-item>
+      
+      </ion-card>
+
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+     
+<div class="fotcont">
+
+<div class="home"  (click)="openHome()">
+<ion-icon name="ios-home-outline"></ion-icon>
+<p>الرئيسية</p>
+</div>
+
+<div class="map" (click)="openMap()">
+    <ion-icon name="ios-map-outline"></ion-icon>
+    <p>الخريطة</p>
+    </div>
+
+    <div class="myalarm" >
+        <ion-icon name="ios-megaphone-outline"></ion-icon>
+        <p>ابلاغاتي</p>
+        </div>
+
+        <div class="myinfo" (click)="myinfo()" >
+            <ion-icon name="ios-information-circle-outline"></ion-icon>
+            <p>حول</p>
+            </div>
+  
+</div>
+
+    </ion-toolbar>
+  </ion-footer>

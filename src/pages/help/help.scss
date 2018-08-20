@@ -1,0 +1,41 @@
+page-help {
+
+}
+
+
+
+.helpers p {
+    font-family: 'Cairo', sans-serif;
+    font-size: 18px;
+}
+
+.helpmap ion-card-content {
+    padding: 0;
+}
+
+.helpers ion-card-content {
+    padding: 0;
+}
+
+.helpers ion-icon {
+    color: #007bff !important;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+.edit-name {
+color: #FFF;
+font-size: 17px;
+}
+
+.edit-name button {
+    background: transparent;
+    color: #FFFF !important;
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+page-help .edit-name {
+    display: flex;
+}

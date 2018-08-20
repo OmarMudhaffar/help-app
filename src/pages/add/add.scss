@@ -1,0 +1,76 @@
+page-add {
+
+}
+
+.toolbar-title-md {
+    color: #FFF;
+}
+
+.back-button.show-back-button {
+    color: #FFF;
+}
+
+.back-button.show-back-button:hover {
+    color: #FFF;
+
+}
+
+.add-content input {
+    width: 100%;
+    padding: 17px;
+    border: 1px solid #CCC;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 3px;
+}
+
+.mymap {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    direction: rtl;
+    border: 1px solid #CCC;
+    width: 100%;
+    border-radius: 3px;
+
+}
+
+ion-item {
+    margin-bottom: 4px;
+}
+
+.add-content button {
+    width: 100%;
+padding: 16px; 
+border-radius: 2px;
+text-align: center;
+font-family: 'Cairo', sans-serif;
+background: transparent;
+border:2px solid #007bff;
+color: #202020;
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+.mymap .cont {
+    display: flex;
+    align-items: center;
+}
+
+.mymap .cont .intro {
+    width: 100%;
+    direction: rtl;
+}
+
+.mymap .cont .mine {
+    width: 100%;
+    direction: ltr;
+}
+
+.mymap .cont .mine i {
+    padding: 10px;
+}
+
+
+.mine #small {
+display: none;
+}

@@ -1,3 +1,95 @@
 page-home {
 
 }
+
+page-home .item-md.item-block .item-inner{
+    border:0px;
+}
+
+
+.input-wrapper {
+direction: rtl;
+}
+
+.item-md h2,.item-md p  {
+    font-family: 'Cairo', sans-serif;
+}
+
+.item-md ion-icon {
+    color: #837d7d;
+}
+
+.toolbar-background-md {
+    border-color: #ccc;
+    background: #007bff;
+}
+
+.toolbar-title-md {
+    color: #FFF;
+    direction: rtl;
+    font-weight: bold;
+    font-family: 'Cairo', sans-serif;
+
+}
+
+.toolbar-title-md i {
+    margin-right: 20px;
+}
+
+.toolbar-title-md .mfather {
+    display: flex;
+    align-items: center;
+}
+
+.mfather .mname {
+    direction: rtl;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mfather .nicon {
+    width: 100%;
+    direction: ltr;
+}
+
+.alertdir {direction: rtl;}
+
+.cardhead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.fotcont {
+display: flex;
+justify-content: center;
+align-items: center;
+direction: rtl;
+text-align: center;
+}
+
+.fotcont div {
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Cairo', sans-serif;
+}
+
+.fotcont p {
+    margin: 0;
+}
+
+.fotcont ion-icon {
+    font-size: 20px;
+}
+
+
+.mapheader {
+    margin: 10px;
+    border: 1px solid #CCC;
+    box-shadow: 0px 0px 1px 0px;
+    border-radius: 3px;
+}

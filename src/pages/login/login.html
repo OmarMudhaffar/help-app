@@ -1,0 +1,69 @@
+
+  
+  <ion-content>
+  
+  <div class="headerlog">
+  
+  <div class="overlay"></div>
+  
+  <div class="content">
+  
+  <div class="page-content">
+  
+  <div class="register-view" id="register-view">
+    <div class="name">
+      <p>ساعد</p>
+      <i class="ileft fa fa-male" aria-hidden="true"></i>
+      <i class="iright fa fa-female" aria-hidden="true"></i>
+    
+    </div>
+    
+    <div class="inputs">
+    
+     <input type="text" placeholder="الاسم الكامل ( عربي )" #sinname>
+     <input type="email" placeholder="البريد الالكتروني" #sinemail>
+     <div class="address">
+      <input type="text" placeholder="العنوان ( الدورة - المهدية )" #address>
+      <input class="mohafda" type="text" placeholder="المحافظة" #mohafada>
+
+     </div>
+     <input id="pass" type="password" placeholder="كلمة المرور" #sinpass>
+  
+
+     <button (click)="register(sinname.value,sinemail.value,sinpass.value,mohafada.value,address.value)" >انشاء حساب</button>
+     <p> او </p>
+     <button (click)="login()" >تسجيل دخول</button>
+    </div>
+  </div>
+  
+  <!-- login view-->
+  
+  
+  <div class="login-view" id="login-view">
+    <div class="name">
+      <p>ساعد</p>
+      <i class="ileft fa fa-male" aria-hidden="true"></i>
+      <i class="iright fa fa-female" aria-hidden="true"></i>
+    
+    </div>
+    
+    <div class="inputs">
+    
+     <input type="email" placeholder="البريد الالكتروني" #logemail>
+     <input type="password" placeholder="كلمة المرور" #logpass>
+     
+     <button (click)="login(logemail.value,logpass.value)" >تسجيل الدخول</button>
+     <p> او </p>
+     <button (click)="register()" >انشاء حساب</button>
+    </div>
+  </div>
+  
+  
+  </div>
+  
+  </div>
+  
+  </div>
+  
+  </ion-content>
+  

@@ -1,0 +1,127 @@
+page-login {
+
+}
+
+ 
+.headerlog {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/imgs/myback.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+
+.headerlog .content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 34;
+    position: relative;
+}
+
+
+.page-content, .name,.page-content .inputs {
+
+    text-align: center;
+    width: 100%;
+    position: relative;
+    padding: 15px;
+}
+
+.page-content .name p {
+    color: #fff;
+    width: 100%;
+    margin: 0%;
+    padding-bottom: 10px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 25px;
+    border-bottom: 2px solid #007bff;
+}
+
+.page-content .name .ileft {
+    position: absolute;
+    top: 40px;
+    left: 36px;
+    color: #FFF;
+    font-size: 23px;
+}
+
+.page-content .name .iright {
+    position: absolute;
+    top: 40px;
+    right:  36px;
+    color: #FFF;
+    font-size: 23px;
+}
+
+.page-content .inputs input{
+width: 100%;
+padding: 13px;
+margin-bottom: 10px;
+font-family: 'Cairo', sans-serif;
+border: 1px solid #FFF;
+direction: rtl;
+border-radius: 2px;
+}
+
+
+.page-content .inputs p {
+    color: #007bff;
+    width: 100%;
+    margin: 0%;
+    padding-bottom: 10px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 17px;
+}
+
+.page-content .inputs button  {
+width: 100%;
+padding: 16px; 
+border-radius: 2px;
+text-align: center;
+font-family: 'Cairo', sans-serif;
+background: transparent;
+border:2px solid #007bff;
+color: #FFF;
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+.login-view {
+    display: none;
+}
+
+.alertdire {
+    direction: rtl;
+}
+
+
+
+
+.address {
+    display: flex;
+    align-items: center;
+}
+
+.address input {
+    margin-right: 4px;
+}
+
+.address .mohafda {
+    width: 140px !important;
+}

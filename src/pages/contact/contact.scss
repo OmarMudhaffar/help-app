@@ -1,3 +1,45 @@
 page-contact {
 
 }
+
+
+.sections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #aaa;
+    padding-top: 10px;
+}
+
+.sections div {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.sections ion-icon {
+        color: #515151 !important;
+}
+
+
+
+ion-item {
+    margin-bottom: -8px;
+}
+
+
+.alertinput {
+
+    width: 100%;
+    margin: 20px;
+    direction: rtl;
+}
+
+.alertinput input {
+    direction: rtl;
+    border: 2px solid #aaa;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+}

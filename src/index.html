@@ -15,6 +15,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+  <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Reem+Kufi" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amiri" rel="stylesheet">
+
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <script src="cordova.js"></script>
 
@@ -28,7 +33,30 @@
   </script>-->
 
   <link href="build/main.css" rel="stylesheet">
+  <style>
 
+    .tabs-md .tabbar {
+      direction: rtl;
+    }
+  
+  .tabs-md .tab-button-icon,.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color: #FFF;
+  }
+
+  .tabs-md .tab-button[aria-selected=true] {
+    border-top: 1px solid #aaa;
+  }
+
+  .tabs-md .tab-button, .tabs-md .tab-button[aria-selected=true] {
+    font-family: 'Cairo', sans-serif;
+    background: #007bff;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px;
+  }
+   
+  </style>
 </head>
 <body>
 
