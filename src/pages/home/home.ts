@@ -9,6 +9,7 @@ import { ContactPage } from '../contact/contact';
 import { CallNumber } from '@ionic-native/call-number';
 import { HelpPage } from '../help/help';
 import { InfoPage } from '../info/info';
+import * as $ from "jquery";
 
 import {
   GoogleMaps,
@@ -49,7 +50,8 @@ export class HomePage {
       db.list("users", res => res.orderByChild("email").equalTo(auth.auth.currentUser.email)).valueChanges().subscribe( (data)=> {
         this.name = data[0]['name'];
         this.addr = data[0]['address'];
-        this.email = auth.auth.currentUser.email
+        this.email = auth.auth.currentUser.email;
+        $(".loading").hide();
       });
      
       platform.ready().then( ()=> {

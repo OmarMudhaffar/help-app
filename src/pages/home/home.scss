@@ -93,3 +93,20 @@ text-align: center;
     box-shadow: 0px 0px 1px 0px;
     border-radius: 3px;
 }
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.loading div {
+    width: 100%;
+}
+
+.loading p {
+    font-family: 'Cairo', sans-serif;
+    font-size: 20px;
+}
