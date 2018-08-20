@@ -8,6 +8,11 @@
 
 <ion-content>
 
+
+  <div class="noitem">
+    <p>لا يوجد عناصر</p>
+  </div>
+
     <ion-card style="margin: 10px 0px 10px 0px; width: 100%;" *ngFor="let item of list | async | reverse">
 
         <div  [id]="item.payload.val().map2" #item.payload.val().map2 style="width: 100%; height: 250px;overflow: hidden;"></div>

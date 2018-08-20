@@ -8,6 +8,7 @@ import { AngularFireDatabase } from '../../../node_modules/angularfire2/database
 
 import { HomePage } from '../home/home';
 import { AboutPage } from '../about/about';
+import * as $ from "jquery";
 
 import { EditPage } from '../edit/edit';
 import { InfoPage } from '../info/info';
@@ -44,6 +45,11 @@ export class ContactPage {
 
       this.list = db.list("problems",ref => ref.orderByChild("email").equalTo(this.auth.auth.currentUser.email)).snapshotChanges();
     
+      db.list("problems",ref => ref.orderByChild("email").equalTo(this.auth.auth.currentUser.email)).snapshotChanges().subscribe( (data)=> {
+         if(data[0] != undefined){
+           $(".noitem").hide();
+         }
+      });
            
       platform.ready().then( ()=> {
         this.loadmap();

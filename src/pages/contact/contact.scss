@@ -43,3 +43,16 @@ ion-item {
     border-radius: 4px;
     width: 100%;
 }
+
+.noitem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.noitem p {
+    font-size: 20px;
+    font-family: 'Cairo', sans-serif;
+
+}
