@@ -46,8 +46,8 @@ export class ContactPage {
       this.list = db.list("problems",ref => ref.orderByChild("email").equalTo(this.auth.auth.currentUser.email)).snapshotChanges();
     
       db.list("problems",ref => ref.orderByChild("email").equalTo(this.auth.auth.currentUser.email)).snapshotChanges().subscribe( (data)=> {
-         if(data[0] != undefined){
-           $(".noitem").hide();
+         if(data[0] == undefined){
+           $(".noitem").css("display","flex");
          }
       });
            
