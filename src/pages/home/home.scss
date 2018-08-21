@@ -51,6 +51,8 @@ direction: rtl;
 .mfather .nicon {
     width: 100%;
     direction: ltr;
+    display: flex;
+    align-items: center;
 }
 
 .alertdir {direction: rtl;}
