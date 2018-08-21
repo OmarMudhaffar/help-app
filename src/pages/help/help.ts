@@ -5,17 +5,12 @@ import { HomePage } from '../home/home';
 import { Observable } from 'rxjs';
 declare var google;
 import {
-  GoogleMaps,
   GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
   Marker
 } from '@ionic-native/google-maps';
 import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
 import { AngularFireAuth } from '../../../node_modules/angularfire2/auth';
-import { ContactPage } from '../contact/contact';
+
 /**
  * Generated class for the HelpPage page.
  *

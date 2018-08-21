@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 import {
-  GoogleMaps,
+
   GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
   Marker
 } from '@ionic-native/google-maps';
-import { Geolocation, Geoposition } from '@ionic-native/geolocation';
+import { Geolocation } from '@ionic-native/geolocation';
 import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
 
 import { ContactPage } from '../contact/contact'

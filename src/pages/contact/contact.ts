@@ -14,12 +14,7 @@ import { EditPage } from '../edit/edit';
 import { InfoPage } from '../info/info';
 
 import {
-  GoogleMaps,
   GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
   Marker
 } from '@ionic-native/google-maps';
 

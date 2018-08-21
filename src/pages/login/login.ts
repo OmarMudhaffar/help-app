@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, ToastController, LoadingController } from 'ionic-angular';
 import * as $ from "jquery";
 import { AngularFireAuth } from 'angularfire2/auth';
-import { TabsPage } from '../tabs/tabs';
 import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
-import { Observable } from 'rxjs';
 import { HomePage } from '../home/home';
 
 /**

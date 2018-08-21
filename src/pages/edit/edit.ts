@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,Platform, LoadingController } from 'ionic-angular';
-import { Geolocation, Geoposition } from '@ionic-native/geolocation';
+import { Geolocation } from '@ionic-native/geolocation';
 import * as $ from "jquery";
 
 declare var google;
 import {
-  GoogleMaps,
   GoogleMap,
   GoogleMapsEvent,
-  GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
   Marker
 } from '@ionic-native/google-maps';
 import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';

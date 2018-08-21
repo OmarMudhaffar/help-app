@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, Platform, AlertController } from 'ionic-angular';
-import { Geolocation, Geoposition } from '@ionic-native/geolocation';
 import { AddPage } from '../add/add';
 declare var google;
 import { AboutPage } from '../about/about';
@@ -14,12 +13,7 @@ import { OneSignal } from '@ionic-native/onesignal';
 
 
 import {
-  GoogleMaps,
   GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
   Marker
 } from '@ionic-native/google-maps';
 import { AngularFireAuth } from '../../../node_modules/angularfire2/auth';
@@ -86,13 +80,6 @@ export class HomePage {
 
 this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
 
-this.oneSignal.handleNotificationReceived().subscribe(() => {
- // do something when notification is received
-});
-
-this.oneSignal.handleNotificationOpened().subscribe(() => {
-  // do something when a notification is opened
-});
 
 this.oneSignal.endInit();
   }
