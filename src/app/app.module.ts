@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
+import { OneSignal } from '@ionic-native/onesignal';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -74,13 +75,14 @@ const firebase = {
     AddPage,
     EditPage,
     HelpPage,
-    InfoPage
+    InfoPage,
   ],
   providers: [
     StatusBar,
     Geolocation,
     CallNumber,
     SplashScreen,
+    OneSignal,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

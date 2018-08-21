@@ -5,10 +5,10 @@
       <div class="mfather">
         <div class="mname">
           <span> ساعد </span>
-          <span (click)="add()" style="margin-right: 15px; font-weight: normal;"> ابلاغ</span>
         </div>
         <div class="nicon">
-          <i (click)="logout()" class="fa fa-sign-out" aria-hidden="true"></i>
+            <ion-icon (click)="logout()" name="walk" style="margin-right: 20px"></ion-icon>
+            <ion-icon (click)="add()" name="md-send"></ion-icon>
 
         </div>
       </div>
@@ -44,7 +44,7 @@
         </ion-item>
       
         <ion-item>
-          <ion-icon name="ios-locate-outline" item-end large ></ion-icon>
+          <ion-icon name="md-pin" item-end large ></ion-icon>
           <h2>{{item.problem}}</h2>
           <p> {{ item.addr }} </p>
         </ion-item>
@@ -52,7 +52,7 @@
         <ion-item>
           
           <button ion-button icon-start clear item-start (click)="help(item.map2,item.lat,item.lng,item.problem,item.addr,item.des,item.name,item.date,item.markname,item.color)" >
-            <ion-icon style="color: #137cff;font-size: 16px;" name="navigate"></ion-icon>
+            <ion-icon style="color: #137cff;font-size: 16px;" name="ios-body"></ion-icon>
             <p style="color: #137cff; font-size: 17px;">تطوع</p>
           </button>
 

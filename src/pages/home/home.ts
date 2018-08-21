@@ -10,6 +10,8 @@ import { CallNumber } from '@ionic-native/call-number';
 import { HelpPage } from '../help/help';
 import { InfoPage } from '../info/info';
 import * as $ from "jquery";
+import { OneSignal } from '@ionic-native/onesignal';
+
 
 import {
   GoogleMaps,
@@ -43,7 +45,8 @@ export class HomePage {
      public platform : Platform,
       public alert : AlertController,
       public auth : AngularFireAuth, public db : AngularFireDatabase,
-      public call : CallNumber) {
+      public call : CallNumber,
+      public oneSignal: OneSignal) {
 
       this.list = db.list("problems").valueChanges();
 
@@ -59,6 +62,39 @@ export class HomePage {
   
       });
 
+      this.mynote();
+
+      this.checkNote();
+
+  }
+
+  checkNote(){
+    this.oneSignal.getIds().then( id => {
+      this.db.list("ids",ref => ref.orderByChild("id").equalTo(id.userId)).valueChanges().subscribe( mdata => {
+       if(mdata[0] == undefined){
+         this.db.list("ids").push({
+           id:id.userId
+         })
+       }
+      });
+      });
+  }
+
+
+  mynote(){
+    this.oneSignal.startInit('1f9f4147-24d7-46e4-be3d-c5403ac23fac', '938889105700');
+
+this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
+
+this.oneSignal.handleNotificationReceived().subscribe(() => {
+ // do something when notification is received
+});
+
+this.oneSignal.handleNotificationOpened().subscribe(() => {
+  // do something when a notification is opened
+});
+
+this.oneSignal.endInit();
   }
 
 

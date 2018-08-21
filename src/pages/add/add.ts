@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,Platform, LoadingController } from 'ionic-angular';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
 import * as $ from "jquery";
+import { OneSignal } from '@ionic-native/onesignal';
 
 declare var google;
 import {
@@ -42,7 +43,8 @@ export class AddPage {
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,public geolocation : Geolocation,
      public platform : Platform , public db : AngularFireDatabase,
-     public load : LoadingController, public auth : AngularFireAuth) {
+     public load : LoadingController, public auth : AngularFireAuth,
+     public oneSignal: OneSignal) {
 
       
     
@@ -203,6 +205,30 @@ const monthNames = ["يناير", "فبراير", "مارس", "ابريل", "م�
       load.dismiss();
       this.navCtrl.setRoot(HomePage);
       this.navCtrl.goToRoot;
+
+      this.db.list("ids").valueChanges().subscribe( ids => {
+
+        ids.forEach(id => {
+
+
+
+          this.oneSignal.postNotification({
+            app_id:"1f9f4147-24d7-46e4-be3d-c5403ac23fac",
+            include_player_ids:[id['id']],
+            contents: {
+              en: "هناك مشكلة جديدة تطوع الان وساعدنا في حلها"
+            },
+            headings: {
+              en: "مشكلة"
+            }
+          })
+        })
+
+       
+
+      });
+
+
     })
 
   }
