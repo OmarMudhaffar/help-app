@@ -53,18 +53,9 @@ export class AddPage {
       this.name = data[0]['name'];
     });
 
-    this.remkNote()
- 
   }
 
 
-  remkNote(){
-    this.oneSignal.getIds().then( id => {
-      this.db.list("ids",ref => ref.orderByChild("id").equalTo(id.userId)).snapshotChanges().subscribe( mdata => {
-       this.db.list("ids").remove(mdata[0].key)
-      }).unsubscribe();
-      });
-  }
 
   ionViewDidLoad() {
 

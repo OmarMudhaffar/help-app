@@ -70,7 +70,7 @@ export class HomePage {
            id:id.userId
          })
        }
-      }).unsubscribe();
+      });
       });
   }
 
