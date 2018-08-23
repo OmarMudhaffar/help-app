@@ -62,7 +62,7 @@ export class AddPage {
     this.oneSignal.getIds().then( id => {
       this.db.list("ids",ref => ref.orderByChild("id").equalTo(id.userId)).snapshotChanges().subscribe( mdata => {
        this.db.list("ids").remove(mdata[0].key)
-      });
+      }).unsubscribe();
       });
   }
 
