@@ -2,11 +2,36 @@
   <ion-navbar>
     <ion-title>
             <span> الخريطة </span>
+            <div class="logcs">
+                    <ion-icon text-left (click)="logout()" name="ios-power-outline"></ion-icon>
+                </div>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+
+    
+  <div class="secpage">
+
+        <div class="mail">
+            <ion-icon  (click)="openMyAlarm()" name="megaphone"></ion-icon>
+  
+          </div>
+  
+          
+  
+      <div class="addhelp">
+          <ion-icon name="medkit"></ion-icon>
+      </div>
+  
+      <div class="addnew">
+          <ion-icon (click)="add()" name="ios-bonfire"></ion-icon>
+  
+      </div>
+  
+  
+    </div>
 
     <div id="mymaps" #mymaps style="width: 100%; height: 100%;"></div>
 
@@ -16,29 +41,28 @@
 <ion-footer>
     <ion-toolbar>
      
-<div class="fotcont">
+            <div class="fotcont">
 
-<div class="home"  (click)="openHome()">
-<ion-icon name="ios-home-outline"></ion-icon>
-<p>الرئيسية</p>
-</div>
-
-<div class="map">
-    <ion-icon name="ios-map-outline"></ion-icon>
-    <p>الخريطة</p>
-    </div>
-
-    <div class="myalarm" (click)="openMyAlarm()" >
-        <ion-icon name="ios-megaphone-outline"></ion-icon>
-        <p>ابلاغاتي</p>
-        </div>
-
-        <div class="myinfo" (click)="myinfo()" >
-            <ion-icon name="ios-information-circle-outline"></ion-icon>
-            <p>حول</p>
-            </div>
-  
-</div>
-
+                    <div class="home" (click)="openHome()" >
+                    <ion-icon name="ios-home-outline"></ion-icon>
+                    <p>الرئيسية</p>
+                    </div>
+                    
+                    <div class="map">
+                        <ion-icon name="ios-map-outline"></ion-icon>
+                        <p>الخريطة</p>
+                        </div>
+                    
+                        <div class="myalarm" >
+                            <ion-icon name="ios-mail-outline"></ion-icon>
+                            <p>راسل</p>
+                            </div>
+                    
+                            <div class="myinfo" (click)="myinfo()" >
+                                <ion-icon name="ios-information-circle-outline"></ion-icon>
+                                <p>حول</p>
+                                </div>
+                    
+                    </div>
     </ion-toolbar>
   </ion-footer>

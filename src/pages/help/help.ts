@@ -42,7 +42,8 @@ export class HelpPage {
   check = false;
   checkadd = true;
   key;
-
+  checkproblem;
+  voulnteer;
 
 
   constructor(public navCtrl: NavController,
@@ -51,7 +52,7 @@ export class HelpPage {
       public auth : AngularFireAuth, public platform : Platform,
      public alert : AlertController) {
         
-
+    
     this.mapname = navParams.get("map");
     this.problem = navParams.get("problem");
     this.lat = navParams.get("lat");
@@ -62,8 +63,9 @@ export class HelpPage {
     this.date = navParams.get("date");
     this.markname = navParams.get("markname");
     this.color = navParams.get("color"); 
+    this.voulnteer = navParams.get("voulnteer"); 
+    this.checkproblem = navParams.get("cproblem"); 
 
-  
 
     this.list = db.list("helpers/" + this.mapname,res => res.orderByChild("map").equalTo(this.mapname)).valueChanges();
     

@@ -26,20 +26,17 @@ direction: rtl;
 
 .toolbar-title-md {
     color: #FFF;
-    direction: rtl;
+    text-align: center;
     font-weight: bold;
     font-family: 'Cairo', sans-serif;
-
+    font-size: 20px;
 }
 
-.toolbar-title-md i {
-    margin-right: 20px;
+.logcs ion-icon {
+font-size: 2.4rem;
+padding-top: 4px;
 }
 
-.toolbar-title-md .mfather {
-    display: flex;
-    align-items: center;
-}
 
 .mfather .mname {
     direction: rtl;
@@ -85,7 +82,7 @@ text-align: center;
 }
 
 .fotcont ion-icon {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 
@@ -115,4 +112,37 @@ text-align: center;
 
 .toolbar-title-md {
     font-size: 18px !important;
+}
+
+.secpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background: #fdfdfd;
+    padding: 15px;
+    border-bottom:1px solid #e0e0e0;
+    top:56px;
+}
+
+.secpage div {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #007bff;
+}
+
+page-home ion-card:first-of-type {
+    margin-top: 60px !important;
+}
+
+
+.logcs {
+    float: left;
+    display: block;
+ 
+    position: absolute;
+    top: 0;
 }

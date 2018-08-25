@@ -1,19 +1,12 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      
-      <div class="mfather">
-        <div class="mname">
+
           <span> ساعد </span>
-        </div>
-        <div class="nicon">
-            <ion-icon (click)="logout()" name="walk" style="margin-right: 20px"></ion-icon>
-            <ion-icon (click)="add()" name="md-send"></ion-icon>
+          <div class="logcs">
+              <ion-icon text-left (click)="logout()" name="ios-power-outline"></ion-icon>
+          </div>
 
-        </div>
-      </div>
-
-     
 
     </ion-title>
   </ion-navbar>
@@ -21,6 +14,25 @@
 
 <ion-content >
 
+  <div class="secpage">
+
+      <div class="mail">
+          <ion-icon  (click)="openMyAlarm()" name="megaphone"></ion-icon>
+        </div>
+
+        
+
+    <div class="addhelp">
+        <ion-icon name="medkit" (click)="volunteer()"></ion-icon>
+    </div>
+
+    <div class="addnew">
+        <ion-icon (click)="add()" name="ios-bonfire"></ion-icon>
+
+    </div>
+
+
+  </div>
 
   <div class="loading">
     <div class="load-content">
@@ -51,10 +63,15 @@
       
         <ion-item>
           
-          <button ion-button icon-start clear item-start (click)="help(item.map2,item.lat,item.lng,item.problem,item.addr,item.des,item.name,item.date,item.markname,item.color)" >
+          <button *ngIf="item.checkproblem" ion-button icon-start clear item-start (click)="help(true,false,item.map2,item.lat,item.lng,item.problem,item.addr,item.des,item.name,item.date,item.markname,item.color)" >
             <ion-icon style="color: #137cff;font-size: 16px;" name="ios-body"></ion-icon>
             <p style="color: #137cff; font-size: 17px;">تطوع</p>
           </button>
+
+          <button *ngIf="item.voulnteer" ion-button icon-start clear item-start (click)="request(false,true,item.map2,item.lat,item.lng,item.problem,item.addr,item.des,item.name,item.date,item.markname,item.color)" >
+              <ion-icon style="color: #137cff;font-size: 16px;" name="ios-body"></ion-icon>
+              <p style="color: #137cff; font-size: 17px;">طلب</p>
+            </button>
 
           <button (click)="callNumber(item.phone)" ion-button icon-start clear item-end *ngIf="item.checkPhone">
               <ion-icon style="color: #137cff;font-size: 16px;" name="md-call"></ion-icon>
@@ -83,9 +100,9 @@
     <p>الخريطة</p>
     </div>
 
-    <div class="myalarm" (click)="openMyAlarm()" >
-        <ion-icon name="ios-megaphone-outline"></ion-icon>
-        <p>ابلاغاتي</p>
+    <div class="myalarm" >
+        <ion-icon name="ios-mail-outline"></ion-icon>
+        <p>راسل</p>
         </div>
 
         <div class="myinfo" (click)="myinfo()" >

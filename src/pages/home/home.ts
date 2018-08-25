@@ -10,7 +10,7 @@ import { HelpPage } from '../help/help';
 import { InfoPage } from '../info/info';
 import * as $ from "jquery";
 import { OneSignal } from '@ionic-native/onesignal';
-
+import {  VolunteerPage  } from '../volunteer/volunteer';
 
 import {
   GoogleMap,
@@ -179,7 +179,7 @@ this.oneSignal.endInit();
   }
 
 
-  help(map,lat,lng,problem,addr,des,name,date,markname,color){
+  help(checkproblem,voulnteer,map,lat,lng,problem,addr,des,name,date,markname,color){
    this.navCtrl.setRoot(HelpPage,{
      map:map,
      des:des,
@@ -190,10 +190,30 @@ this.oneSignal.endInit();
      name:name,
      date:date,
      markname:markname,
-     color:color
+     color:color,
+     cproblem:checkproblem,
+      voulnteer:voulnteer
    });
    this.navCtrl.goToRoot;
   }
+
+  request(checkproblem,voulnteer,map,lat,lng,problem,addr,des,name,date,markname,color){
+    this.navCtrl.setRoot(HelpPage,{
+      map:map,
+      des:des,
+      lat:lat,
+      lng:lng,
+      problem:problem,
+      addr:addr,
+      name:name,
+      date:date,
+      markname:markname,
+      color:color,
+      cproblem:checkproblem,
+      voulnteer:voulnteer
+    });
+    this.navCtrl.goToRoot;
+   }
 
 
   myinfo(){
@@ -202,6 +222,11 @@ this.oneSignal.endInit();
       email:this.email,
       addr:this.addr
     });
+  }
+
+  volunteer(){
+    this.navCtrl.setRoot(VolunteerPage);
+    this.navCtrl.goToRoot;
   }
 
 }

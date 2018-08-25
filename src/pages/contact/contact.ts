@@ -13,6 +13,8 @@ import * as $ from "jquery";
 import { EditPage } from '../edit/edit';
 import { InfoPage } from '../info/info';
 
+import { AddPage } from '../add/add';
+
 import {
   GoogleMap,
   Marker
@@ -183,6 +185,24 @@ export class ContactPage {
       email:this.email,
       addr:this.addr
     });
+  }
+
+  
+  add(){
+    this.navCtrl.setRoot(AddPage);
+    this.navCtrl.goToRoot;
+  }
+
+  logout(){
+    var alert = this.alert.create({
+      subTitle:"تسجيل الخروج من حسابك ؟",
+      buttons:['الغاء',{text:'خروج',handler: out=> {
+        this.auth.auth.signOut();
+        
+      }}],
+      cssClass:"alertdir"
+    });
+    alert.present();
   }
 
 }

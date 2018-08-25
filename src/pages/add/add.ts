@@ -197,6 +197,8 @@ const monthNames = ["يناير", "فبراير", "مارس", "ابريل", "م�
      map2:rand + "s",
      phone:phone,
      checkPhone:check,
+     voulnteer:false,
+     checkproblem:true,
      markname:problem
     }).then( ()=> {
       $("input").val();

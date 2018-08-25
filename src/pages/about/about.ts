@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, Platform, AlertController } from 'ionic-angular';
 import {
 
   GoogleMap,
@@ -12,6 +12,7 @@ import { ContactPage } from '../contact/contact'
 import { HomePage } from '../home/home';
 import { InfoPage } from '../info/info';
 import { AngularFireAuth } from '../../../node_modules/angularfire2/auth';
+import { AddPage } from '../add/add';
 
 @Component({
   selector: 'page-about',
@@ -30,7 +31,10 @@ export class AboutPage {
   email;
 
   constructor(public navCtrl: NavController, public platform : Platform,
-  public db : AngularFireDatabase, public geolocation : Geolocation, public auth : AngularFireAuth) {
+  public db : AngularFireDatabase,
+   public geolocation : Geolocation,
+    public auth : AngularFireAuth,
+  public alert : AlertController) {
 
   
       platform.ready().then( ()=> {
@@ -122,6 +126,24 @@ export class AboutPage {
       email:this.email,
       addr:this.addr
     });
+  }
+
+  
+  add(){
+    this.navCtrl.setRoot(AddPage);
+    this.navCtrl.goToRoot;
+  }
+
+  logout(){
+    var alert = this.alert.create({
+      subTitle:"تسجيل الخروج من حسابك ؟",
+      buttons:['الغاء',{text:'خروج',handler: out=> {
+        this.auth.auth.signOut();
+        
+      }}],
+      cssClass:"alertdir"
+    });
+    alert.present();
   }
 
 }

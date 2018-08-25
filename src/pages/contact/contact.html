@@ -2,12 +2,36 @@
   <ion-navbar>
     <ion-title>
         <span> ابلاغاتي </span>
+        <div class="logcs">
+            <ion-icon text-left (click)="logout()" name="ios-power-outline"></ion-icon>
+        </div>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
+  
+    <div class="secpage">
+
+        <div class="mail">
+            <ion-icon  (click)="openMyAlarm()" name="megaphone"></ion-icon>
+  
+          </div>
+  
+          
+  
+      <div class="addhelp">
+          <ion-icon name="medkit"></ion-icon>
+      </div>
+  
+      <div class="addnew">
+          <ion-icon (click)="add()" name="ios-bonfire"></ion-icon>
+  
+      </div>
+  
+  
+    </div>
 
   <div class="noitem">
     <p>لا يوجد عناصر</p>
@@ -69,8 +93,8 @@
     </div>
 
     <div class="myalarm" >
-        <ion-icon name="ios-megaphone-outline"></ion-icon>
-        <p>ابلاغاتي</p>
+        <ion-icon name="ios-mail-outline"></ion-icon>
+        <p>راسل</p>
         </div>
 
         <div class="myinfo" (click)="myinfo()" >
