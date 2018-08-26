@@ -19,6 +19,8 @@ import {
 import { AngularFireAuth } from '../../../node_modules/angularfire2/auth';
 import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
 
+import { FeedbackPage } from '../feedback/feedback';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -227,6 +229,10 @@ this.oneSignal.endInit();
   volunteer(){
     this.navCtrl.setRoot(VolunteerPage);
     this.navCtrl.goToRoot;
+  }
+
+  feedback(){
+    this.navCtrl.push(FeedbackPage);
   }
 
 }

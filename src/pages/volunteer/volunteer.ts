@@ -147,7 +147,7 @@ post(problem,description,address,phone){
 
 
 
-  if(problem.length > 3 && description.length > 3 && address.length > 3 && this.lat != 0 && this.lng != 0 && phone >= 10){}
+  if(problem.length > 3 && description.length > 3 && address.length > 3 && this.lat != 0 && this.lng != 0 && phone >= 10){
 
   var load = this.load.create({
     content:"جاري النشر"
@@ -218,6 +218,7 @@ const monthNames = ["يناير", "فبراير", "مارس", "ابريل", "م�
 
   })
 
+}
 }
 
 }

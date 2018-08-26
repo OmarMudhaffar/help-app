@@ -188,8 +188,18 @@ loadmymap(){
 
  addhelper(){
 
+  var subtitle;
+
+  if(this.voulnteer == true){
+   subtitle = "هل تريد التسجيل كمحتاج ؟"
+  }
+
+  if(this.checkproblem == true){
+    subtitle = "هل تريد التسجيل كمتطوع ؟"
+  }
+
   var alert = this.alert.create({
-  subTitle:"هل تريد التسجيل كمتطوع ؟",
+  subTitle:subtitle,
   buttons:[{text:"نعم",handler : ()=> {
     this.db.list("helpers/" + this.mapname).push({
       email:this.auth.auth.currentUser.email,

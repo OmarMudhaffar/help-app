@@ -31,6 +31,7 @@ import { EditPage } from '../pages/edit/edit';
 import { HelpPage } from '../pages/help/help';
 import { InfoPage } from '../pages/info/info';
 import { VolunteerPage } from '../pages/volunteer/volunteer';
+import { FeedbackPage } from '../pages/feedback/feedback';
 
 const firebase = { 
   apiKey: "AIzaSyCb6RdOSAJZrQC3vvhiVq318HCRXIlUD20",
@@ -56,7 +57,8 @@ const firebase = {
     HelpPage,
     InfoPage,
     ReversePipe,
-    VolunteerPage
+    VolunteerPage,
+    FeedbackPage
   ],
   imports: [
     BrowserModule,
@@ -78,7 +80,8 @@ const firebase = {
     EditPage,
     HelpPage,
     InfoPage,
-    VolunteerPage
+    VolunteerPage,
+    FeedbackPage 
   ],
   providers: [
     StatusBar,

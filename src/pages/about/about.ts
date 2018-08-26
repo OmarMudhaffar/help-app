@@ -13,6 +13,8 @@ import { HomePage } from '../home/home';
 import { InfoPage } from '../info/info';
 import { AngularFireAuth } from '../../../node_modules/angularfire2/auth';
 import { AddPage } from '../add/add';
+import {  FeedbackPage  } from '../feedback/feedback';
+import {  VolunteerPage  } from '../volunteer/volunteer';
 
 @Component({
   selector: 'page-about',
@@ -144,6 +146,15 @@ export class AboutPage {
       cssClass:"alertdir"
     });
     alert.present();
+  }
+
+  feedback(){
+    this.navCtrl.push(FeedbackPage);
+  }
+
+  volunteer(){
+    this.navCtrl.setRoot(VolunteerPage);
+    this.navCtrl.goToRoot;
   }
 
 }

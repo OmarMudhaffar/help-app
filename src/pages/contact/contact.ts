@@ -14,6 +14,8 @@ import { EditPage } from '../edit/edit';
 import { InfoPage } from '../info/info';
 
 import { AddPage } from '../add/add';
+import {  FeedbackPage  } from '../feedback/feedback';
+import {  VolunteerPage  } from '../volunteer/volunteer';
 
 import {
   GoogleMap,
@@ -203,6 +205,16 @@ export class ContactPage {
       cssClass:"alertdir"
     });
     alert.present();
+  }
+
+  volunteer(){
+    this.navCtrl.setRoot(VolunteerPage);
+    this.navCtrl.goToRoot;
+  }
+
+
+  feedback(){
+    this.navCtrl.push(FeedbackPage);
   }
 
 }

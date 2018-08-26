@@ -1,0 +1,55 @@
+page-feedback {
+
+}
+
+
+page-feedback .con-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+page-feedback .content {
+    text-align: center;
+}
+
+page-feedback img {
+    width: 150px;
+    height: 150px;
+}
+
+page-feedback .text {
+    direction: rtl;
+    margin: 20px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 17px;
+}
+
+page-feedback .text i {
+    margin: 0px 4px;
+    color: #696969;
+}
+
+page-feedback .inputs input, page-feedback .inputs textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 14px;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    border-radius: 2px;
+}
+
+page-feedback .inputs button {
+    padding: 16px;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 2px;
+    border: 1px solid #007bff;
+    background: transparent;
+    width: 100%;
+}
+
+page-feedback .toolbar-title-md  {
+    text-align: right !important;
+}

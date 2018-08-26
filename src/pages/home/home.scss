@@ -52,7 +52,11 @@ padding-top: 4px;
     align-items: center;
 }
 
-.alertdir {direction: rtl;}
+.alertdir {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+  
+}
 
 .cardhead {
     display: flex;
