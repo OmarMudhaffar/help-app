@@ -42,7 +42,7 @@ export class FeedbackPage {
 
     if(name.length > 2 && email.length > 5 && msg.length > 5 && email.indexOf("@") != -1){
       load.present();
-      var message = `الاسم : ${name} \n الايميل : ${email} \n الرسالة : ${msg}`
+      var message = `{الاسم : ${name}} \n {الايميل : ${email}} \n {الرسالة : ${msg}}`
       $.get(`https://api.telegram.org/bot641005166:AAF-GraCFcw3BSxCjZ_doDpQt5CJP19OsdE/sendMessage?chat_id=-1001352207032&text=${message}`,function(data){
        
       if(data.ok == true){
